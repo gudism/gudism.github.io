@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+#map {
+  height: 80vh;
+  width: 100%;
+}
+#art-info {
+  padding: 1em;
+  background: #f0f0f0;
+}
