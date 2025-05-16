@@ -1,4 +1,4 @@
-const map = L.map('map').setView([34.045, -118.26], 13);
+const map = L.map('map').setView([34.045, -118.255], 13); // Center between both sites
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map by OpenStreetMap contributors'
@@ -11,7 +11,7 @@ marker1.bindPopup(`
   <a href="essay.html" target="_blank" style="color:blue;">View Full Essay & Artwork</a>
 `);
 
-// St. Vibiana’s Cathedral (Main & 2nd St)
+// St. Vibiana’s Cathedral
 const marker2 = L.marker([34.0503, -118.2456]).addTo(map);
 marker2.bindPopup(`
   <strong>Saint Vibiana and Her Cathedral</strong><br>
