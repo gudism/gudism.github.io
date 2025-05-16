@@ -41,4 +41,75 @@
 
     #map {
       height: 100vh;
-      width:
+      width: 100%;
+      position: relative;
+    }
+
+    #map::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle, rgba(0,255,0,0.1) 1px, transparent 1px);
+      background-size: 3px 3px;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .leaflet-popup-content {
+      color: #00ff66;
+      font-family: monospace;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header" onclick="location.href='index.html'">GUDISM CORP.</div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([34.045, -118.255], 13);
+
+    const tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap & CartoDB',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    tileLayer.getContainer().style.filter = `
+      hue-rotate(95deg)
+      saturate(8)
+      brightness(2.2)
+      contrast(2.5)
+      drop-shadow(0 0 3px #00ff66)
+      drop-shadow(0 0 6px #00ff66)
+      drop-shadow(0 0 10px #00ff66)
+    `;
+
+    const locations = [
+      {
+        title: "Sacred Facades, Profane Screens",
+        lat: 34.040547,
+        lng: -118.259694,
+        url: "essay.html"
+      },
+      {
+        title: "Saint Vibiana and Her Cathedral",
+        lat: 34.0503,
+        lng: -118.2456,
+        url: "vibiana.html"
+      }
+    ];
+
+    locations.forEach(loc => {
+      const marker = L.marker([loc.lat, loc.lng]).addTo(map);
+      marker.bindPopup(`
+        <strong>${loc.title}</strong><br>
+        <a href="${loc.url}" target="_blank" style="color:#00ff66;">View Full Essay & Artwork</a>
+      `);
+    });
+  </script>
+
+</body>
+</html>
