@@ -10,6 +10,7 @@ tileLayer.getContainer().style.filter = `
   contrast(2)
   hue-rotate(90deg)
   saturate(5)
+  `;
 
 
 
