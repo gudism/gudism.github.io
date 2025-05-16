@@ -4,109 +4,87 @@
   <meta charset="utf-8" />
   <title>Sacred Facades, Profane Screens</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
     body {
+      margin: 0;
+      background-color: black;
+      font-family: 'VT323', monospace;
+      color: #00ff66;
       max-width: 800px;
       margin: auto;
       padding: 2em;
-      font-family: sans-serif;
       line-height: 1.6;
     }
+
+    #header {
+      font-size: 3rem;
+      text-align: center;
+      padding: 1rem 0;
+      position: relative;
+      background: rgba(0, 0, 0, 0.6);
+      letter-spacing: 0.1em;
+      backdrop-filter: blur(2px);
+      text-shadow:
+        0 0 3px #00ff66,
+        0 0 6px #00ff66,
+        0 0 12px #00ff66;
+      animation: flickerGlitch 3s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes flickerGlitch {
+      0%, 100% { opacity: 1; transform: none; }
+      2% { opacity: 0.9; transform: translateX(1px); }
+      4% { transform: translateX(-1px); }
+      6% { opacity: 0.95; }
+      10% { transform: translateX(2px); }
+      14% { transform: none; }
+      30% { opacity: 0.9; transform: translateX(0.5px); }
+      32% { opacity: 1; }
+    }
+
+    #backgroundGrid::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle, rgba(0,255,0,0.08) 1px, transparent 1px);
+      background-size: 3px 3px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    h1, h2 {
+      color: #00ff66;
+      text-shadow: 0 0 6px #00ff66;
+    }
+
+    a {
+      color: #00ff66;
+      text-decoration: underline;
+    }
+
     img {
       max-width: 100%;
       margin: 1em 0;
     }
   </style>
 </head>
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-  body {
-    margin: 0;
-    background-color: black;
-    font-family: 'VT323', monospace;
-    color: #00ff66;
-  }
-
-  #header {
-    font-size: 3rem;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    background: rgba(0, 0, 0, 0.6);
-    letter-spacing: 0.1em;
-    backdrop-filter: blur(2px);
-    text-shadow:
-      0 0 3px #00ff66,
-      0 0 6px #00ff66,
-      0 0 12px #00ff66;
-    animation: flickerGlitch 3s infinite;
-    cursor: pointer;
-  }
-
-  @keyframes flickerGlitch {
-    0%, 100% { opacity: 1; transform: none; }
-    2% { opacity: 0.9; transform: translateX(1px); }
-    4% { transform: translateX(-1px); }
-    6% { opacity: 0.95; }
-    10% { transform: translateX(2px); }
-    14% { transform: none; }
-    30% { opacity: 0.9; transform: translateX(0.5px); }
-    32% { opacity: 1; }
-  }
-
-  #backgroundGrid::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle, rgba(0,255,0,0.08) 1px, transparent 1px);
-    background-size: 3px 3px;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  h1, h2 {
-    color: #00ff66;
-    text-shadow: 0 0 6px #00ff66;
-  }
-
-  a {
-    color: #00ff66;
-    text-decoration: underline;
-  }
-</style>
-
 <body>
   <div id="backgroundGrid"></div>
-<div id="header" onclick="location.href='index.html'">GUDISM CORP.</div>
-  <h1>Sacred Facades, Profane Screens</h1>
+  <div id="header" onclick="location.href='index.html'">GUDISM CORP.</div>
+
+  <h1>Sacred Facades, Profane Screens: Pornography, Preservation, and the Erotic Afterlives of Los Angeles’ Historic Theaters</h1>
   <p><em>Digital collage, 2025</em></p>
 
   <img src="mayan poster bw3.png" alt="Artwork image" />
 
   <h2>Abstract</h2>
-  <p>This paper examines the intertwined histories of architectural preservation and pornography in Los Angeles, using the Mayan Theatre as a focal case study. Originally commissioned by oil magnate Edward Doheny and designed by Mexican artist Francisco Cornejo in the Mayan Revival style, the theater was a lavish tribute to Mesoamerican aesthetics. In the 1970s, it entered a new life as an adult film venue under the ownership of Carlos Tobalina, reflecting a broader trend in which the porn industry repurposed historic performance spaces. Through analysis of media reports, preservation records, and firsthand accounts of venues such as the Tiki and Pussycat theaters, this paper argues that adult cinema played an unacknowledged role in conserving Los Angeles’s architectural heritage. This investigation also serves as a conceptual foundation for an original artwork that incorporates the Mayan Theatre’s facade and visual motifs from the poster of Tobalina’s Lady Dynamite. By positioning this creative work within its historical and cultural context, the paper demonstrates how the visual legacy of adult cinema continues to shape Los Angeles’s aesthetic and spatial memory.
-</p>
+  <p>This paper examines the intertwined histories of architectural preservation and pornography in Los Angeles, using the Mayan Theatre as a focal case study. Originally commissioned by oil magnate Edward Doheny and designed by Mexican artist Francisco Cornejo in the Mayan Revival style, the theater was a lavish tribute to Mesoamerican aesthetics. In the 1970s, it entered a new life as an adult film venue under the ownership of Carlos Tobalina, reflecting a broader trend in which the porn industry repurposed historic performance spaces. Through analysis of media reports, preservation records, and firsthand accounts of venues such as the Tiki and Pussycat theaters, this paper argues that adult cinema played an unacknowledged role in conserving Los Angeles’s architectural heritage. This investigation also serves as a conceptual foundation for an original artwork that incorporates the Mayan Theatre’s facade and visual motifs from the poster of Tobalina’s <em>Lady Dynamite</em>. By positioning this creative work within its historical and cultural context, the paper demonstrates how the visual legacy of adult cinema continues to shape Los Angeles’s aesthetic and spatial memory.</p>
 
   <h2>Main Text</h2>
-  <h2>Main Text</h2>
+  <p>In the heart of Downtown Los Angeles, the Mayan Theatre stands as an ornate relic of the city’s theatrical past. Completed in 1927 at the height of the Mayan Revival architectural movement, it was funded by oil tycoon Edward Doheny and sculpted by Mexican artist Francisco Cornejo. Its facade is crowded with iconographic motifs drawn from Mesoamerican architecture: sun gods, serpents, jaguars, and celestial symbols rendered in faux sandstone and painted in red, blue, and gold. The theater’s aesthetic vision was both an architectural experiment and a political fantasy, imagining a “true architecture of the Americas” at a moment when Los Angeles sought to position itself as a global cultural capital.</p>
 
-<p>In the heart of Downtown Los Angeles, the Mayan Theatre stands as an ornate relic of the city’s theatrical past. Completed in 1927 at the height of the Mayan Revival architectural movement, it was funded by oil tycoon Edward Doheny and sculpted by Mexican artist Francisco Cornejo. Its facade is crowded with iconographic motifs drawn from Mesoamerican architecture: sun gods, serpents, jaguars, and celestial symbols rendered in faux sandstone and painted in red, blue, and gold. The theater’s aesthetic vision was both an architectural experiment and a political fantasy, imagining a “true architecture of the Americas” at a moment when Los Angeles sought to position itself as a global cultural capital.</p>
+  <p>Yet beneath this sacred styling lies another history, one equally tied to the identity of Los Angeles. In the late 1960s and through the 1980s, the Mayan became a hub for adult cinema under the stewardship of Carlos Tobalina, a prominent figure in the Los Angeles porn industry. This shift was not a deviation from the city’s trajectory but a logical extension of it. Across Los Angeles, dozens of once-grand theaters were preserved not through nonprofit conservancies or public funds but through their reinvention as pornographic venues. These theaters provided not only space but sanctuary, becoming havens for subcultural publics and urban outsiders. The same architecture that once staged Gershwin musicals now housed erotic fantasies, reaffirming the city’s theatrical identity in a newly transgressive form.</p>
 
-<p>Yet beneath this sacred styling lies another history, one equally tied to the identity of Los Angeles. In the late 1960s and through the 1980s, the Mayan became a hub for adult cinema under the stewardship of Carlos Tobalina, a prominent figure in the Los Angeles porn industry. This shift was not a deviation from the city’s trajectory but a logical extension of it. Across Los Angeles, dozens of once-grand theaters were preserved not through nonprofit conservancies or public funds but through their reinvention as pornographic venues. These theaters provided not only space but sanctuary, becoming havens for subcultural publics and urban outsiders. The same architecture that once staged Gershwin musicals now housed erotic fantasies, reaffirming the city’s theatrical identity in a newly transgressive form.</p>
-
-<p>This evolution was not isolated. Adult cinemas such as the Pussycat, Tiki, and Cave Theatre became embedded in the urban fabric, stabilizing properties that might otherwise have faced demolition. While often derided as sites of moral decay, these theaters offered anonymity, affordability, and freedom at a time when public expressions of sexuality were increasingly monitored and suppressed. Before the term “adaptive reuse” gained popularity in the preservation world, the adult film industry had already enacted it, preserving the structural shells of Beaux Arts, Art Deco, and revivalist buildings even as the content inside veered into the illicit. Tobalina’s work at the Mayan, along with his conversion of other properties such as the X Theatre, reveals the layered relationship between pornography and the physical preservation of Los Angeles.</p>
-
-<p>The Tiki Theater, the final remaining porn theater in Los Angeles, stands as a quiet epilogue. Tucked between discount shops and storefronts on Santa Monica Boulevard, the Tiki today functions as a space of stillness and anonymity. Patrons buy time, not necessarily to watch, but to be left alone. For some, it is a ritual space. For others, a shelter. While the images flicker on screen, what persists is the architecture itself—a low-lit monument that endures despite gentrification, real estate speculation, and the ubiquity of private digital screens.</p>
-
-<p>To examine these theaters is to confront the contradictions that animate Los Angeles. This is a city obsessed with surfaces but moved by what happens behind them. It is a place that dreams in cinematic color but survives in its shadows. The Mayan Theatre, with its sacred facade and profane history, embodies that contradiction. It is more than a building. It is a monument to the hidden forces that have helped shape the city’s visual culture, its erotic undercurrents, and its peculiar commitment to preservation through taboo.</p>
-  <!-- Continue with more paragraphs here -->
-
-  <h2>Works Cited</h2>
-  <ul>
-    <li><a href="https://losangelestheatres.blogspot.com/2018/04/mayan-theatre.html" target="_blank">Counter, Bill (2018)</a></li>
-    <li><a href="https://www.latimes.com/california/story/2023-12-05/last-porn-movie-theater-los-angeles-tiki" target="_blank">Hernandez, Angie (2023)</a></li>
-    <li><a href="https://popula.com/2021/07/05/the-last-dirty-picture-show" target="_blank">Koester, Megan (2021)</a></li>
-    <li><a href="https://sfgate.com" target="_blank">Mejía, Paula (2024)</a></li>
-  </ul>
-</body>
-</html>
+  <p>This evolution was not isolated. Adult cinemas such as the Pussycat, Tiki, and Cave Theatre became embedded in the urban fabric, stabilizing properties that might otherwise have faced demolition. While often derided as sites of moral decay, these theaters offered anonymity, affordability, and freedom at a time when public expressions of sexuality were increasingly monitored and suppressed.</p>
