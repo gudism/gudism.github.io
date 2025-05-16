@@ -91,6 +91,54 @@
       font-family: monospace;
       font-size: 1rem;
     }
+    body {
+  margin: 0;
+  background-color: #001f1f;
+  background-image: url('https://i.imgur.com/3z3QZ1g.png'); /* Optional: pixel-art wallpaper */
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'VT323', monospace;
+  overflow: hidden;
+}
+
+.window {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  width: 90vw;
+  height: 80vh;
+  background: #e0e6f0;
+  border: 2px solid #6a8dad;
+  box-shadow: 5px 5px 0px #1c2e3b;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.window-bar {
+  background: linear-gradient(to right, #7fa8cd, #4e7296);
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  border-bottom: 2px solid #4e7296;
+  cursor: move;
+}
+
+#map {
+  flex-grow: 1;
+  position: relative;
+}
+
+#map::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(0,255,0,0.1) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  z-index: 999;
+}
+
   </style>
 </head>
 <body>
@@ -104,7 +152,10 @@
     <div class="folder" onclick="location.href='about.html'">About</div>
   </div>
 
+<div class="window">
+  <div class="window-bar">📍 Map - GUDISM CORP.</div>
   <div id="map"></div>
+</div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
