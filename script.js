@@ -1,12 +1,19 @@
-const map = L.map('map').setView([34.040547, -118.259694], 14);
+const map = L.map('map').setView([34.045, -118.26], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: 'Map by OpenStreetMap'
+  attribution: 'Map by OpenStreetMap contributors'
 }).addTo(map);
 
-const marker = L.marker([34.040547, -118.259694]).addTo(map);
-
-marker.bindPopup(`
+// Mayan Theatre
+const marker1 = L.marker([34.040547, -118.259694]).addTo(map);
+marker1.bindPopup(`
   <strong>Sacred Facades, Profane Screens</strong><br>
   <a href="essay.html" target="_blank" style="color:blue;">View Full Essay & Artwork</a>
+`);
+
+// St. Vibiana’s Cathedral (Main & 2nd St)
+const marker2 = L.marker([34.0503, -118.2456]).addTo(map);
+marker2.bindPopup(`
+  <strong>Saint Vibiana and Her Cathedral</strong><br>
+  <a href="vibiana.html" target="_blank" style="color:blue;">View Full Essay & Artwork</a>
 `);
