@@ -5,23 +5,32 @@
   <title>My Art Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-    #map {
-      height: 90vh;
-      width: 100%;
-    }
+    body { margin: 0; font-family: sans-serif; }
+    #map { height: 90vh; width: 100%; position: relative; }
   </style>
+
+  <!-- 🎨 Duotone Filter -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <filter id="duotoneFilter">
+      <feColorMatrix type="matrix" values="
+        0.4 0.2 0   0  0,
+        0.1 0.3 0   0  0,
+        0   0.1 0.4 0  0,
+        0   0   0   1  0" />
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.1 1" />
+        <feFuncG type="table" tableValues="0.3 0.7" />
+        <feFuncB type="table" tableValues="0.9 0.2" />
+      </feComponentTransfer>
+    </filter>
+  </svg>
+
 </head>
 <body>
-
-  <h1 style="text-align:center;">My Art Map</h1>
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
+
