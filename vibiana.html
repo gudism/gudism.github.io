@@ -4,69 +4,85 @@
   <meta charset="utf-8" />
   <title>Saint Vibiana and Her Cathedral</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
     body {
-      max-width: 800px;
-      margin: auto;
-      padding: 2em;
-      font-family: sans-serif;
+      margin: 0;
+      background-color: black;
+      font-family: 'VT323', monospace;
+      color: #00ff66;
+      padding: 2rem;
       line-height: 1.6;
+    }
+    #header {
+      font-size: 3rem;
+      text-align: center;
+      padding: 1rem 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #00ff66;
+      text-shadow: 0 0 3px #00ff66, 0 0 6px #00ff66, 0 0 12px #00ff66;
+      cursor: pointer;
+      animation: flickerGlitch 3s infinite;
+    }
+    @keyframes flickerGlitch {
+      0%, 100% { opacity: 1; transform: none; }
+      2% { opacity: 0.9; transform: translateX(1px); }
+      4% { transform: translateX(-1px); }
+      6% { opacity: 0.95; }
+      10% { transform: translateX(2px); }
+      14% { transform: none; }
+      30% { opacity: 0.9; transform: translateX(0.5px); }
+      32% { opacity: 1; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle, rgba(0,255,0,0.08) 1px, transparent 1px);
+      background-size: 3px 3px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    h1, h2 {
+      color: #00ff66;
+      text-shadow: 0 0 6px #00ff66;
+    }
+    a {
+      color: #00ff66;
+      text-decoration: underline;
     }
     img {
       max-width: 100%;
-      margin: 1.5em 0;
+      margin: 2em 0;
+      border: 1px solid #00ff66;
+      box-shadow: 0 0 10px #00ff66;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
+  <div id="header" onclick="location.href='index.html'">GUDISM CORP.</div>
+  <div class="content">
+    <h1>Saint Vibiana and Her Cathedral: Patroness and Architectural Legacy of Los Angeles</h1>
+    <p><em>Digital research collage, 2025</em></p>
 
-  <h1>Saint Vibiana and Her Cathedral</h1>
-  <p><em>Digital research collage, 2025</em></p>
+    <img src="vibiana-poster-copy-dither-rg-final.png" alt="Saint Vibiana Artwork" />
 
-  <img src="vibiana-poster-copy-dither-rg-final.png" alt="Saint Vibiana Poster Artwork" />
+    <h2>St. Vibiana: The Patron Saint of Los Angeles</h2>
+    <p>The relics of Saint Vibiana were discovered in a Roman catacomb, bearing an inscription that identified her as an "innocent and undefiled soul," a designation confirming her martyrdom. Recognizing her as a suitable patroness for the growing Catholic population of Los Angeles, Pope Pius IX presented her relics to Bishop Thaddeus Amat of Monterey, with the stipulation that a cathedral be built in her honor. Her arrival in Los Angeles symbolized divine favor and protection, and her relics became a central devotional object for the city's Catholic faithful (Weber 43–44).</p>
 
-  <h2>Abstract</h2>
-  <p>Saint Vibiana, an early Christian martyr whose relics were discovered in the Roman catacombs in 1859, holds a unique place in the spiritual and cultural history of Los Angeles. Pope Pius IX's decision to send her relics to California marked a pivotal moment in the city's Catholic development. She was declared the principal patroness of Los Angeles, and her relics were placed in the newly constructed St. Vibiana’s Cathedral, dedicated in 1876. The cathedral, a significant architectural and religious landmark, not only embodied the faith of Catholic immigrants but also represented the evolving artistic and civic identity of Los Angeles. Over the course of its history, St. Vibiana’s Cathedral witnessed changes in religious practice, urban development, and ecclesiastical policy, ultimately leading to its closure and preservation as a historic landmark.</p>
+    <p>Devotion to St. Vibiana was strongly encouraged by the Church. She was granted a public feast day on September 1, and a religious association in her name was established to foster piety and intercession. Miraculously, her relics survived a fire in 1865 that destroyed the pro-cathedral in Santa Barbara, further reinforcing the perception of her as a divine protector (Weber 45).</p>
 
-  <h2>St. Vibiana: The Patron Saint of Los Angeles</h2>
-  <p>The relics of Saint Vibiana were discovered in a Roman catacomb, bearing an inscription that identified her as an "innocent and undefiled soul," a designation confirming her martyrdom. Recognizing her as a suitable patroness for the growing Catholic population of Los Angeles, Pope Pius IX presented her relics to Bishop Thaddeus Amat of Monterey, with the stipulation that a cathedral be built in her honor. Her arrival in Los Angeles symbolized divine favor and protection, and her relics became a central devotional object for the city's Catholic faithful (Weber 43–44).</p>
+    <h2>The Architecture and Artistic Significance of St. Vibiana’s Cathedral</h2>
+    <p>The cathedral, built at Main and Second Streets in downtown Los Angeles, reflected the artistic and architectural trends of its time. Designed in a Spanish Baroque Revival style, St. Vibiana’s featured a grand facade, high vaulted ceilings, and intricate stonework, reminiscent of European cathedrals. Its classical design elements, including the use of Indiana limestone and elaborate stained glass, represented the aspirations of the Catholic community in a rapidly expanding city (Weber 49–50).</p>
 
-  <p>Devotion to St. Vibiana was strongly encouraged by the Church. She was granted a public feast day on September 1, and a religious association in her name was established to foster piety and intercession. Miraculously, her relics survived a fire in 1865 that destroyed the pro-cathedral in Santa Barbara, further reinforcing the perception of her as a divine protector (Weber 45).</p>
+    <p>As one of the first designated historical landmarks in Los Angeles, the cathedral stood as an enduring representation of Catholic identity in Southern California. Despite its grandeur, it was deemed insufficient for the growing archdiocese as early as 1904, when Pope Pius X approved the construction of a new cathedral. However, efforts to replace St. Vibiana’s were repeatedly delayed (Economist 1995).</p>
 
-  <h2>The Architecture and Artistic Significance of St. Vibiana’s Cathedral</h2>
-  <p>The cathedral, built at Main and Second Streets in downtown Los Angeles, reflected the artistic and architectural trends of its time. Designed in a Spanish Baroque Revival style, St. Vibiana’s featured a grand facade, high vaulted ceilings, and intricate stonework, reminiscent of European cathedrals. Its classical design elements, including the use of Indiana limestone and elaborate stained glass, represented the aspirations of the Catholic community in a rapidly expanding city (Weber 49–50).</p>
+    <h2>The Socio-Religious Context Throughout History</h2>
+    <p>The establishment of St. Vibiana’s Cathedral coincided with a period of significant Catholic immigration to the United States, particularly from Mexico, Ireland, and Italy. In Los Angeles, a city still forming its identity, the cathedral served as a crucial institution that provided not only religious guidance but also social support for immigrant communities. The Church offered education, charity, and a sense of belonging, helping Catholic immigrants assimilate while maintaining their religious traditions (Weber 52–53).</p>
 
-  <p>As one of the first designated historical landmarks in Los Angeles, the cathedral stood as an enduring representation of Catholic identity in Southern California. Despite its grandeur, it was deemed insufficient for the growing archdiocese as early as 1904, when Pope Pius X approved the construction of a new cathedral. However, efforts to replace St. Vibiana’s were repeatedly delayed (Economist 1995).</p>
-
-  <h2>The Socio-Religious Context Throughout History</h2>
-  <p>The establishment of St. Vibiana’s Cathedral coincided with a period of significant Catholic immigration to the United States, particularly from Mexico, Ireland, and Italy. In Los Angeles, a city still forming its identity, the cathedral served as a crucial institution that provided not only religious guidance but also social support for immigrant communities. The Church offered education, charity, and a sense of belonging, helping Catholic immigrants assimilate while maintaining their religious traditions (Weber 52–53).</p>
-
-  <p>During the early 20th century, as Los Angeles grew into a major metropolitan center, Catholicism continued to expand its presence. The cathedral became a spiritual anchor for Catholics in a rapidly modernizing and diversifying city. However, anti-Catholic sentiment was also present, particularly from Protestant-dominated social and political spheres. The presence of an ornate Catholic cathedral in the heart of Los Angeles was both a sign of the Church’s growing influence and a target for those who viewed Catholicism as foreign or incompatible with American Protestant values (Weber 54).</p>
-
-  <p>By the mid-20th century, the demographic composition of Los Angeles had shifted significantly due to increased migration from Latin America. The cathedral remained a vital space for the city's Latino Catholic population, reinforcing its role as a sanctuary for faith amid broader socio-political changes, including civil rights movements and urban renewal projects. During this period, the Catholic Church in Los Angeles played a crucial role in advocating for social justice, workers' rights, and immigrant protections, mirroring the struggles and perseverance of its parishioners (Mannion 14).</p>
-    <h2>The Role of the Cathedral in Religious and Social Life</h2>
-  <p>Throughout its history, St. Vibiana’s served as a focal point for Catholic worship and religious events. It was the site of episcopal consecrations, civic ceremonies, and high-profile funerals, including those of bishops and notable political figures. The cathedral provided a spiritual refuge for Catholic immigrants, many of whom faced discrimination and hardship as they sought to establish new lives in Los Angeles (Weber 52–53).</p>
-
-  <p>A performance by the Cornerstone Theater Company in 2002 at the decommissioned cathedral emphasized the persistence of faith in the face of hardship. The production, which included adaptations of biblical parables, highlighted the Catholic immigrant experience in Los Angeles, intertwining stories of cultural division and unity. The setting of St. Vibiana’s, with its layered history, added depth to the performance, reinforcing the themes of endurance and transformation (Mannion 14).</p>
-
-  <h2>The Closure and Preservation of St. Vibiana’s Cathedral</h2>
-  <p>In 1994, the Northridge earthquake inflicted significant damage on the cathedral, leading the Archdiocese of Los Angeles to close the building and propose its demolition. The plan to replace St. Vibiana’s with a modern $189 million cathedral complex, the Cathedral of Our Lady of the Angels, sparked considerable controversy. Preservationists, historians, and community activists mobilized to save the historic structure, recognizing its architectural and historical importance (Economist 1995).</p>
-
-  <p>Opposition to the demolition stemmed from both preservationists and financial concerns. The Archdiocese had already secured substantial private funding, including contributions from wealthy donors, which accelerated the decision to move forward with the new cathedral. Some critics questioned whether the money should have been spent on social services rather than an expensive new church (Commonweal 2003).</p>
-
-  <p>Despite resistance, Cardinal Roger Mahony pushed ahead with the plans, ultimately overseeing the completion of the new Cathedral of Our Lady of the Angels in 2002. Following extensive legal battles, St. Vibiana’s was preserved and repurposed as a cultural venue, now known as Vibiana. The remains of St. Vibiana were relocated to the crypt of the new cathedral, where she continues to be venerated (National Catholic Reporter 1999).</p>
-
-  <h2>Conclusion</h2>
-  <p>St. Vibiana and her cathedral hold an enduring legacy in the spiritual and cultural history of Los Angeles. As the city’s patroness, she symbolized the resilience and faith of its Catholic community. Her cathedral, a masterpiece of 19th-century religious architecture, stood as a testament to the Church’s influence and the evolving identity of Los Angeles. Though no longer an active place of worship, the former cathedral remains a preserved landmark, reminding Angelenos of the rich history and faith that shaped their city. Through devotion, architecture, and cultural memory, St. Vibiana continues to inspire, her presence enduring in the sacred spaces of Los Angeles.</p>
-
-  <h2>Works Cited</h2>
-  <ul>
-    <li>Commonweal. "Our Lady of the Freeways: Is Los Angeles’s new Cathedral worth the price?" <em>Commonweal</em>, vol. 130, no. 4, 28 Feb. 2003, p. 13.</li>
-    <li>Economist. "Fallen Angel: Los Angeles’s Cathedral." <em>The Economist</em>, vol. 335, no. 7915, 20 May 1995, pp. A28+.</li>
-    <li>Mannion, Kristina. "Crossings: Journeys of Catholic Immigrants at St. Vibiana's Cathedral." <em>Back Stage West</em>, vol. 9, no. 26, 27 June 2002, p. 14.</li>
-    <li>National Catholic Reporter. "Los Angeles Cathedral." <em>National Catholic Reporter</em>, vol. 35, no. 23, 9 Apr. 1999, p. 14.</li>
-    <li>Weber, Francis J. "An Historical Sketch of Saint Vibiana’s Cathedral, Los Angeles." <em>Southern California Quarterly</em>, vol. 44, no. 1, 1962, pp. 43–56.</li>
-  </ul>
-
-</body>
-</html>
-
+    <p>During the early 20th century, as Los Angeles grew into a major metropolitan center, Catholicism continued to expand its presence. The cathedral became a spiritual anchor for Catholics in a rapidly modernizing and diversifying city. However, anti-Catholic sentiment was also present, particularly from Protestant-dominated social and political spheres. The presence of an ornate Catholic cathedral in the heart of Los Angeles was both a sign of the Church’s growing influence and a target for those who viewed Catholicism as foreign or incompatible with American Protestant values (Weber 54).</p>
