@@ -1,22 +1,21 @@
+const map = L.map('map').setView([34.045, -118.255], 13);
+
 const tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap & CartoDB',
   subdomains: 'abcd',
   maxZoom: 19
 }).addTo(map);
 
-// Enhanced neon green glow effect
 tileLayer.getContainer().style.filter = `
-  hue-rotate(95deg)     /* Turn grays into green */
-  saturate(8)           /* Intensify color */
-  brightness(2.2)       /* Make lines stand out more */
-  contrast(2.5)         /* Sharpen features */
+  hue-rotate(95deg)
+  saturate(8)
+  brightness(2.2)
+  contrast(2.5)
   drop-shadow(0 0 3px #00ff66)
   drop-shadow(0 0 6px #00ff66)
-  drop-shadow(0 0 9px #00ff66)
+  drop-shadow(0 0 10px #00ff66)
 `;
 
-
-// Marker locations
 const locations = [
   {
     title: "Sacred Facades, Profane Screens",
