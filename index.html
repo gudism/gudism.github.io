@@ -17,23 +17,19 @@
     height: 100vh;
     width: 100%;
   }
+<style>
+  body {
+    margin: 0;
+    background-color: black;
+    font-family: sans-serif;
+  }
+  #map {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
 </style>
 
-  <!-- 🎨 Duotone Filter -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <filter id="duotoneFilter">
-      <feColorMatrix type="matrix" values="
-        0.4 0.2 0   0  0,
-        0.1 0.3 0   0  0,
-        0   0.1 0.4 0  0,
-        0   0   0   1  0" />
-      <feComponentTransfer>
-        <feFuncR type="table" tableValues="0.1 1" />
-        <feFuncG type="table" tableValues="0.3 0.7" />
-        <feFuncB type="table" tableValues="0.9 0.2" />
-      </feComponentTransfer>
-    </filter>
-  </svg>
 
 </head>
 <body>
