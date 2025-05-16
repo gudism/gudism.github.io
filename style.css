@@ -2,10 +2,16 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
-#map {
-  height: 80vh;
-  width: 100%;
+#map::after {
+  content: "";
+  background-image: url('your-dither-pattern.png'); /* upload your PNG first */
+  opacity: 0.25;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 1000;
 }
+
 #art-info {
   padding: 1em;
   background: #f0f0f0;
