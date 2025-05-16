@@ -1,19 +1,19 @@
 const map = L.map('map').setView([34.045, -118.255], 13); // Center between both sites
 
-const tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap & Carto',
+const tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap & CartoDB',
   subdomains: 'abcd',
   maxZoom: 19
 }).addTo(map);
 
-// Apply CSS filter to simulate dithered duotone
+// Apply electric blue tone with CSS filter
 tileLayer.getContainer().style.filter = `
+  brightness(1.4)
   contrast(1.2)
-  brightness(1.1)
-  saturate(2)
-  grayscale(1)
-  url('#duotoneFilter')
+  hue-rotate(220deg)
+  saturate(4)
 `;
+
 
 
 // Mayan Theatre
