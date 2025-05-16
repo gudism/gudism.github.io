@@ -1,29 +1,40 @@
+// Initialize map centered between Mayan Theatre & St. Vibiana
+const map = L.map('map').setView([34.045, -118.255], 13);
+
+// Add dark tile layer and apply electric green glow filter
 const tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap & CartoDB',
   subdomains: 'abcd',
   maxZoom: 19
 }).addTo(map);
 
-// 💡 Electric green glow effect via CSS filter
 tileLayer.getContainer().style.filter = `
   brightness(1.8)
   contrast(2)
   hue-rotate(90deg)
   saturate(5)
-  `;
+`;
 
+// Add markers for each location
+const locations = [
+  {
+    title: "Sacred Facades, Profane Screens",
+    lat: 34.040547,
+    lng: -118.259694,
+    url: "essay.html"
+  },
+  {
+    title: "Saint Vibiana and Her Cathedral",
+    lat: 34.0503,
+    lng: -118.2456,
+    url: "vibiana.html"
+  }
+];
 
-
-// Mayan Theatre
-const marker1 = L.marker([34.040547, -118.259694]).addTo(map);
-marker1.bindPopup(`
-  <strong>Sacred Facades, Profane Screens</strong><br>
-  <a href="essay.html" target="_blank" style="color:blue;">View Full Essay & Artwork</a>
-`);
-
-// St. Vibiana’s Cathedral
-const marker2 = L.marker([34.0503, -118.2456]).addTo(map);
-marker2.bindPopup(`
-  <strong>Saint Vibiana and Her Cathedral</strong><br>
-  <a href="vibiana.html" target="_blank" style="color:blue;">View Full Essay & Artwork</a>
-`);
+locations.forEach(loc => {
+  const marker = L.marker([loc.lat, loc.lng]).addTo(map);
+  marker.bindPopup(`
+    <strong>${loc.title}</strong><br>
+    <a href="${loc.url}" target="_blank" style="color:lime;">View Full Essay & Artwork</a>
+  `);
+});
