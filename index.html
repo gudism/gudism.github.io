@@ -102,13 +102,24 @@
       }
     ];
 
-    locations.forEach(loc => {
-      const marker = L.marker([loc.lat, loc.lng]).addTo(map);
-      marker.bindPopup(`
-        <strong>${loc.title}</strong><br>
-        <a href="${loc.url}" target="_blank" style="color:#00ff66;">View Full Essay & Artwork</a>
-      `);
-    });
+   // Neon green marker icon
+const greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+// Add markers using green icon
+locations.forEach(loc => {
+  const marker = L.marker([loc.lat, loc.lng], { icon: greenIcon }).addTo(map);
+  marker.bindPopup(`
+    <strong>${loc.title}</strong><br>
+    <a href="${loc.url}" target="_blank" style="color:#00ff66;">View Full Essay & Artwork</a>
+  `);
+});
   </script>
 
 </body>
