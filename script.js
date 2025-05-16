@@ -1,7 +1,6 @@
-// Initialize map centered between Mayan Theatre & St. Vibiana
 const map = L.map('map').setView([34.045, -118.255], 13);
 
-// Add dark tile layer and apply electric green glow filter
+// Glowing green map tiles
 const tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap & CartoDB',
   subdomains: 'abcd',
@@ -15,7 +14,7 @@ tileLayer.getContainer().style.filter = `
   saturate(5)
 `;
 
-// Add markers for each location
+// Marker locations
 const locations = [
   {
     title: "Sacred Facades, Profane Screens",
@@ -35,6 +34,6 @@ locations.forEach(loc => {
   const marker = L.marker([loc.lat, loc.lng]).addTo(map);
   marker.bindPopup(`
     <strong>${loc.title}</strong><br>
-    <a href="${loc.url}" target="_blank" style="color:lime;">View Full Essay & Artwork</a>
+    <a href="${loc.url}" target="_blank" style="color:#00ff66;">View Full Essay & Artwork</a>
   `);
 });
